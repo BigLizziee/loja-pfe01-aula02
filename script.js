@@ -15,7 +15,7 @@ function mostrarCards(){
 
         <div class="card">
             <h3>${p.produto}</h3>
-            <img src="${p.imagem}" alt="boné">
+            <img src="${p.imagem}" alt="${p.produto}">
             <p>preço:${p.preco}</p>
             <button>Detalhes</button>
         </div>

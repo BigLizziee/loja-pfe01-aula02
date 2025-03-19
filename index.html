@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja da BigLizzie</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="../loja-pfe01-aula02/assets/blusa.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/blusa.jpg" type="image/x-icon">
 </head>
-<body onload="mostrarCards()">
+<body>
     <header>
         <h2>Loja da BigLizzie</h2>
+        <button onclick="cadastro.classlist.remove('oculto')">Novo produto</button>
     </header>
     <main>
        
@@ -17,5 +18,19 @@
     <footer>
         <h2>By Lizzie</h2>
     </footer>
+    <div  id="cadastro" class="modal oculto"></div>
+    <div class="janela">
+        <div>
+            <h3>Cadastro</h3>
+            <button onclick="window.location.reload()">X</button>
+        </div>
+        <form>
+            <input type="text" name="produto" placeholder="Nome do produto" required>
+            <input type="text" name="descricao" placeholder="Descrição" required>
+            <input type="number"  step="0.01" name="preco" placeholder="Preço" required>
+            <input type="text" name="iamgem" placeholder="Cole aqui o endereço da imagem" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
 </body>
 <script src="script.js"></script>
