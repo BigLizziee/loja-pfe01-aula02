@@ -11,6 +11,15 @@ fetch(uri)
 function mostrarCards(){
     const main = document.querySelector('main');
     produtos.forEach(p=>{
-        main.innerHTML += p.produtos;
+        main.innerHTML += `
+
+        <div class="card">
+            <h3>${p.produto}</h3>
+            <img src="${p.imagem}" alt="boné">
+            <p>preço:${p.preco}</p>
+            <button>Detalhes</button>
+        </div>
+
+        `;
     })
 }
